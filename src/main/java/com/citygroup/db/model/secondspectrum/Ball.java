@@ -1,4 +1,4 @@
-package com.citygroup.db.model;
+package com.citygroup.db.model.secondspectrum;
 
 import lombok.Data;
 

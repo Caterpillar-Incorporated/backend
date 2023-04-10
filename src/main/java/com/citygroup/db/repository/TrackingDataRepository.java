@@ -9,5 +9,5 @@ import java.util.List;
 @Repository
 public interface TrackingDataRepository extends JpaRepository<TrackingDataEntity, Long> {
 
-    List<TrackingDataEntity> findAllByIdGreaterThanEqualAndIdLessThan(Long start, Long end);
+    List<TrackingDataEntity> findAllByGameIdEqualsAndIdGreaterThanEqualAndIdLessThan(String gameId, Long start, Long end);
 }

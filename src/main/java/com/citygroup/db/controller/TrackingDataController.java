@@ -1,6 +1,6 @@
 package com.citygroup.db.controller;
 
-import com.citygroup.db.model.TrackingData;
+import com.citygroup.db.model.secondspectrum.TrackingData;
 import com.citygroup.db.service.TrackingDataService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -18,12 +18,11 @@ public class TrackingDataController {
     }
 
     @GetMapping("/tracking-data")
-    public List<TrackingData> getTrackingData(@RequestParam long start, @RequestParam long end) {
-        return trackingDataService.getTrackingDataRange(start, end);
-    }
-
-    @GetMapping("/test")
-    public String getTrackingData() {
-        return "hello to flutter land";
+    public List<TrackingData> getTrackingData(
+            @RequestParam String gameId,
+            @RequestParam long start,
+            @RequestParam long end
+    ) {
+        return trackingDataService.getTrackingDataRange(gameId, start, end);
     }
 }

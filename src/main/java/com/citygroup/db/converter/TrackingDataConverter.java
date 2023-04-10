@@ -1,6 +1,6 @@
 package com.citygroup.db.converter;
 
-import com.citygroup.db.model.TrackingData;
+import com.citygroup.db.model.secondspectrum.TrackingData;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
